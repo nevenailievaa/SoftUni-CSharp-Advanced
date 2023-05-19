@@ -1,4 +1,4 @@
-﻿//INPUT
+//INPUT
 int size = int.Parse(Console.ReadLine());
 
 //ACTION
@@ -8,8 +8,7 @@ if (size < 3)
     return;
 }
 
-char[,] matrix = new char[size, size];
-
+char[,] chessBoard = new char[size, size];
 //Creating The Chess Board (The Matrix)
 for (int row = 0; row < size; row++)
 {
@@ -17,7 +16,7 @@ for (int row = 0; row < size; row++)
 
     for (int col = 0; col < size; col++)
     {
-        matrix[row, col] = chars[col];
+        chessBoard[row, col] = chars[col];
     }
 }
 
@@ -33,9 +32,9 @@ while(true)
     {
         for (int col = 0; col < size; col++)
         {
-            if (matrix[row,col] == 'K')
+            if (chessBoard[row,col] == 'K')
             {
-                int attackedKnights = CountAttackedKnights(row, col, size, matrix);
+                int attackedKnights = CountAttackedKnights(row, col, size, chessBoard);
 
                 if (countMostAttacking < attackedKnights)
                 {
@@ -52,11 +51,12 @@ while(true)
     }
     else
     {
-        matrix[rowMostAttacking, colMostAttacking] = '0';
+        chessBoard[rowMostAttacking, colMostAttacking] = '0';
         knightsRemoved++;
     }
 }
 
+//OUTPUT
 Console.WriteLine(knightsRemoved);
 
 //Attacked Knights Counter
@@ -133,6 +133,7 @@ static int CountAttackedKnights(int row, int col, int size, char[,] matrix)
     return attackedKnights;
 }
 
+//Valid Cell Checker
 static bool IsCellValid(int row, int col, int size)
 {
     return row >= 0 && row < size && col >= 0 && col < size;
