@@ -1,4 +1,4 @@
-﻿//iNPUT
+﻿//INPUT
 List<string> guests = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).ToList();
 
 //ACTION
