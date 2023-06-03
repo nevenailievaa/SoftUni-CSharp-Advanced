@@ -1,6 +1,3 @@
-﻿using System.Security;
-using System.Security.Cryptography.X509Certificates;
-
 namespace DefiningClasses;
 
 public class StartUp
@@ -47,7 +44,9 @@ public class StartUp
         {
             Console.WriteLine($"{trainer.Name} {trainer.BadgesCount} {trainer.Pokemons.Count}");
         }
-
+         
+        
+        
         //Creating Pokemon Method
         static Pokemon CreatePokemon(string name, string element, int health)
         {
