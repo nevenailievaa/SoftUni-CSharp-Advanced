@@ -5,7 +5,6 @@ using CustomDoublyLinkedList;
 //Creating Doubly Linked List
 SoftuniLinkedList numbers = new SoftuniLinkedList();
 
-
 //Testing
 string command = string.Empty;
 
@@ -54,8 +53,3 @@ while ((command = Console.ReadLine()) != "End")
         numbers.ToArray();
     }
 }
-
-//AddFirst 10
-//AddFirst 5
-//AddLast 15
-//ToArray
