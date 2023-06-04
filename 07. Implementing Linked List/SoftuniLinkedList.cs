@@ -13,7 +13,6 @@ public class SoftuniLinkedList
         Tail = tail;
     }
 
-
     //Adding First Method
     public void AddFirst(int element)
     {
