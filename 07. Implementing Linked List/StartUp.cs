@@ -1,5 +1,3 @@
-﻿using System;
-using System.Data;
 using CustomDoublyLinkedList;
 
 //Creating Doubly Linked List
