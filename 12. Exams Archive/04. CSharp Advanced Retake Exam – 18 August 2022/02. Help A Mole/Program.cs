@@ -107,6 +107,7 @@ namespace _02.HelpAMole
                 }
                 field[moleRow, moleCol] = 'M';
             }
+            
             //OUTPUT
             if (points >= 25)
             {
@@ -118,6 +119,7 @@ namespace _02.HelpAMole
                 Console.WriteLine("Too bad! The Mole lost this battle!");
                 Console.WriteLine($"The Mole lost the game with a total of {points} points.");
             }
+            
             //Field Print
             for (int row = 0; row < fieldSize; row++)
             {
